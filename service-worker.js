@@ -2,12 +2,12 @@ self.addEventListener('install', event => {
     event.waitUntil(
       caches.open('v1').then(cache => {
         return cache.addAll([
-          '/',
-          '/index.html',
-          '/manifest.json',
-          '/css/style.css',
-          '/js/app.js',
-          '/images/icon.png'
+          '/notification-pusher/',
+          '/notification-pusher/index.html',
+          '/notification-pusher/manifest.json',
+          '/notification-pusher/css/style.css',
+          '/notification-pusher/js/app.js',
+          '/notification-pusher/images/icon.png'
         ]);
       })
     );
