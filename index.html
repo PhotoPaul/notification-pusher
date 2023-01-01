@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <base href="/notification-pusher">
     <meta charset="utf-8">
     <title>My PWA</title>
-    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="manifest" href="/notification-pusher/manifest.webmanifest">
   </head>
   <body>
     <h1>Welcome to My PWA</h1>
     <p>This is my personal PWA, where I share my interests and projects.</p>
     <ul>
-      <li><a href="about">About me</a></li>
-      <li><a href="projects">My projects</a></li>
-      <li><a href="contact">Contact me</a></li>
+      <li><a href="/notification-pusher/about">About me</a></li>
+      <li><a href="/notification-pusher/projects">My projects</a></li>
+      <li><a href="/notification-pusher/contact">Contact me</a></li>
     </ul>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('service-worker.js');
+          navigator.serviceWorker.register('/notification-pusher/service-worker.js');
         });
       }
     </script>
