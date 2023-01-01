@@ -4,10 +4,9 @@ self.addEventListener('install', event => {
         return cache.addAll([
           '/notification-pusher/',
           '/notification-pusher/index.html',
-          '/notification-pusher/manifest.json',
-          '/notification-pusher/css/style.css',
-          '/notification-pusher/js/app.js',
-          '/notification-pusher/images/icon.png'
+          '/notification-pusher/manifest.webmanifest',
+          '/notification-pusher/192.png',
+          '/notification-pusher/512.png'
         ]);
       })
     );
