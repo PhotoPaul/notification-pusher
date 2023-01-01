@@ -23,8 +23,12 @@ self.addEventListener('install', event => {
   self.addEventListener('sync', event => {
     console.log('sync');
     console.log(event);
-    if (event.tag === 'my-sync-tag') {
+    if (event.tag === 'my-sync-tag') {debugger;
       event.waitUntil(
+        self.registration.showNotification('Sync completed', {
+            body: 'The background sync has completed.',
+            icon: '/images/icon.png'
+        })
         // Perform sync logic here
       );
     }
