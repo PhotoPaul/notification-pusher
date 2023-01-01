@@ -21,6 +21,8 @@ self.addEventListener('install', event => {
   });
   
   self.addEventListener('sync', event => {
+    console.log('sync');
+    console.log(event);
     if (event.tag === 'my-sync-tag') {
       event.waitUntil(
         // Perform sync logic here
@@ -29,6 +31,8 @@ self.addEventListener('install', event => {
   });
   
   self.addEventListener('notificationclick', event => {
+    console.log('notificationclick');
+    console.log(event);
     event.notification.close();
     event.waitUntil(
       // Perform notification click logic here
